@@ -41,22 +41,22 @@ const SCENE = {
 
 const LEVEL_UP_OPTIONS = [
   {
-    label: 'HP 回復',
-    description: 'HP を 40 回復する',
+    label: 'HP Recovery',
+    description: 'Restore 40 HP',
     symbol: '♥',
     color: '#FF6B6B',
     apply: (p) => p.heal(40),
   },
   {
-    label: '攻撃力 UP',
-    description: 'ダメージ +25%（累積）',
+    label: 'Attack UP',
+    description: 'Damage +25% (stacks)',
     symbol: '⚔',
     color: '#FFD700',
     apply: (p) => { p.attackMultiplier += 0.25; },
   },
   {
-    label: 'スキル強化',
-    description: '特殊攻撃クールダウン -0.5秒',
+    label: 'Skill Boost',
+    description: 'Special cooldown -0.5s',
     symbol: '⚡',
     color: '#00FF00',
     apply: (p) => { p.specialCooldownMax = Math.max(1, p.specialCooldownMax - 0.5); },
@@ -64,10 +64,10 @@ const LEVEL_UP_OPTIONS = [
 ];
 
 const AREA_NAMES = [
-  'AREA 1: エントランス',
-  'AREA 2: オープンフロア',
-  'AREA 3: 役員フロア',
-  'AREA 4: ボスエリア',
+  'AREA 1: ENTRANCE',
+  'AREA 2: OPEN FLOOR',
+  'AREA 3: EXECUTIVE FLOOR',
+  'AREA 4: BOSS AREA',
 ];
 
 /** エリアごとのウェーブインデックス（createWave 引数） */

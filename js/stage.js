@@ -27,10 +27,10 @@ export class Stage {
 
     // エリア定義
     this._areas = [
-      { name: 'エントランス', start: 0, end: 1200 },
-      { name: 'オープンフロア', start: 1200, end: 2400 },
-      { name: '役員フロア', start: 2400, end: 3600 },
-      { name: 'ボスエリア', start: 3600, end: 4800 },
+      { name: 'Entrance', start: 0, end: 1200 },
+      { name: 'Open Floor', start: 1200, end: 2400 },
+      { name: 'Executive Floor', start: 2400, end: 3600 },
+      { name: 'Boss Area', start: 3600, end: 4800 },
     ];
   }
 

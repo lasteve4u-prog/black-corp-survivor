@@ -83,14 +83,14 @@ export function drawTitleScreen(ctx, canvasWidth, canvasHeight, blinkFrame, scor
   // 縁取り（より太く）
   ctx.lineWidth = 8;
   ctx.strokeStyle = '#330000';
-  ctx.strokeText('ブラック企業サバイバー', canvasWidth / 2, titleY);
+  ctx.strokeText('BLACK CORP SURVIVOR', canvasWidth / 2, titleY);
   // 本体（より鮮やかなグラデーション）
   const titleGrad = ctx.createLinearGradient(0, titleY - 36, 0, titleY + 36);
   titleGrad.addColorStop(0, '#ff1a1a');
   titleGrad.addColorStop(0.5, '#ff6060');
   titleGrad.addColorStop(1, '#dd0000');
   ctx.fillStyle = titleGrad;
-  ctx.fillText('ブラック企業サバイバー', canvasWidth / 2, titleY);
+  ctx.fillText('BLACK CORP SURVIVOR', canvasWidth / 2, titleY);
 
   ctx.shadowBlur = 0;
 
@@ -98,9 +98,9 @@ export function drawTitleScreen(ctx, canvasWidth, canvasHeight, blinkFrame, scor
   ctx.font = 'bold 28px monospace';
   ctx.lineWidth = 4;
   ctx.strokeStyle = '#000000';
-  ctx.strokeText('～経営者ゾンビ殲滅戦～', canvasWidth / 2, titleY + 65);
+  ctx.strokeText('~ ZOMBIE EXECUTIVE EXTERMINATION ~', canvasWidth / 2, titleY + 65);
   ctx.fillStyle = '#ffcccc';
-  ctx.fillText('～経営者ゾンビ殲滅戦～', canvasWidth / 2, titleY + 65);
+  ctx.fillText('~ ZOMBIE EXECUTIVE EXTERMINATION ~', canvasWidth / 2, titleY + 65);
 
   // 装飾ライン（より目立つ）
   const lineW = 400;
@@ -241,7 +241,7 @@ export function drawGameOver(ctx, canvasWidth, canvasHeight, score) {
   // フレーバーテキスト
   ctx.font = '15px monospace';
   ctx.fillStyle = 'rgba(180, 180, 180, 0.7)';
-  ctx.fillText('ご冥福をお祈りします...', cx, titleY + 46);
+  ctx.fillText('Rest in peace...', cx, titleY + 46);
 
   // ── スコア ──
   _drawScorePanel(ctx, canvasWidth, canvasHeight, score, canvasHeight * 0.73);
@@ -581,9 +581,9 @@ export function drawVictory(ctx, canvasWidth, canvasHeight, score) {
   ctx.font = 'bold 18px monospace';
   ctx.lineWidth = 3;
   ctx.strokeStyle = '#000000';
-  ctx.strokeText('ブラック企業に、正義の鉄槌を！', canvasWidth / 2, centerY + 60);
+  ctx.strokeText('JUSTICE FOR THE BLACK CORPORATION!', canvasWidth / 2, centerY + 60);
   ctx.fillStyle = '#f0e8c0';
-  ctx.fillText('ブラック企業に、正義の鉄槌を！', canvasWidth / 2, centerY + 60);
+  ctx.fillText('JUSTICE FOR THE BLACK CORPORATION!', canvasWidth / 2, centerY + 60);
 
   // スコア表示
   _drawScorePanel(ctx, canvasWidth, canvasHeight, score, centerY + 120);
@@ -740,13 +740,13 @@ export function drawControls(ctx, canvasWidth, canvasHeight) {
 
   // 操作一覧
   const controls = [
-    { key: '← → / A D', desc: '左右移動' },
-    { key: '↑ / W', desc: '上移動' },
-    { key: '↓ / S', desc: '下移動' },
-    { key: 'Z / SPACE', desc: 'パンチ（連打でコンボ）' },
-    { key: 'X', desc: '必殺技（辞表スラッシュ）' },
-    { key: 'Shift', desc: 'ダッシュ（無敵時間あり）' },
-    { key: 'ENTER', desc: '決定 / ポーズ' },
+    { key: '← → / A D', desc: 'Move left / right' },
+    { key: '↑ / W', desc: 'Move up' },
+    { key: '↓ / S', desc: 'Move down' },
+    { key: 'Z / SPACE', desc: 'Punch (combo on repeat)' },
+    { key: 'X', desc: 'Special (Resignation Slash)' },
+    { key: 'Shift', desc: 'Dash (with invincibility)' },
+    { key: 'ENTER', desc: 'Confirm / Pause' },
   ];
 
   const startY = cardY + 90;
@@ -812,7 +812,7 @@ function _drawPlayerHP(ctx, player, canvasWidth, canvasHeight) {
   // 名前
   ctx.font = 'bold 12px monospace';
   ctx.fillStyle = '#c0c0e0';
-  ctx.fillText('ヒカリ', x + 30, y + 4);
+  ctx.fillText('HIKARI', x + 30, y + 4);
 
   // HPバー外枠
   const barX = x;
@@ -973,9 +973,9 @@ function _drawBossHP(ctx, boss, canvasWidth) {
   // 名前の縁取り
   ctx.lineWidth = 3;
   ctx.strokeStyle = '#000000';
-  ctx.strokeText('CEO ゾンビ', canvasWidth / 2, y - 12);
+  ctx.strokeText('CEO ZOMBIE', canvasWidth / 2, y - 12);
   ctx.fillStyle = '#ff6060';
-  ctx.fillText('CEO ゾンビ', canvasWidth / 2, y - 12);
+  ctx.fillText('CEO ZOMBIE', canvasWidth / 2, y - 12);
 
   // フェーズ表示
   ctx.textAlign = 'right';
@@ -1182,13 +1182,13 @@ export function drawLevelUp(ctx, canvasWidth, canvasHeight, options, selectedIdx
   ctx.font = 'bold 26px monospace';
   ctx.lineWidth = 4;
   ctx.strokeStyle = '#000';
-  ctx.strokeText('LEVEL UP ！　アップグレードを選んでください', cx, cy - 105);
+  ctx.strokeText('LEVEL UP! CHOOSE AN UPGRADE', cx, cy - 105);
   ctx.fillStyle = '#FFD700';
-  ctx.fillText('LEVEL UP ！　アップグレードを選んでください', cx, cy - 105);
+  ctx.fillText('LEVEL UP! CHOOSE AN UPGRADE', cx, cy - 105);
 
   ctx.font = '14px monospace';
   ctx.fillStyle = '#778899';
-  ctx.fillText('← → で選択　/　Enter または Space で決定', cx, cy - 76);
+  ctx.fillText('Select with ← →  /  Confirm with Enter or Space', cx, cy - 76);
 
   // カード描画
   const cardW = 210;
@@ -1278,7 +1278,7 @@ export function drawPause(ctx, canvasWidth, canvasHeight) {
   // 操作説明
   ctx.font = '16px monospace';
   ctx.fillStyle = '#888899';
-  ctx.fillText('ESC / P キーで再開', cx, cy + 30);
+  ctx.fillText('Press ESC / P to resume', cx, cy + 30);
 
   ctx.restore();
 }
