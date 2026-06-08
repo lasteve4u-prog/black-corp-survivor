@@ -1182,13 +1182,13 @@ export function drawLevelUp(ctx, canvasWidth, canvasHeight, options, selectedIdx
   ctx.font = 'bold 26px monospace';
   ctx.lineWidth = 4;
   ctx.strokeStyle = '#000';
-  ctx.strokeText('LEVEL UP! CHOOSE AN UPGRADE', cx, cy - 105);
+  ctx.strokeText('LEVEL UP! CHOOSE AN UPGRADE', cx, cy - 120);
   ctx.fillStyle = '#FFD700';
-  ctx.fillText('LEVEL UP! CHOOSE AN UPGRADE', cx, cy - 105);
+  ctx.fillText('LEVEL UP! CHOOSE AN UPGRADE', cx, cy - 120);
 
   ctx.font = '14px monospace';
   ctx.fillStyle = '#778899';
-  ctx.fillText('Select with ← →  /  Confirm with Enter or Space', cx, cy - 76);
+  ctx.fillText('Select with ← →  /  Confirm with Enter or Space', cx, cy - 92);
 
   // カード描画
   const cardW = 210;
@@ -1199,7 +1199,7 @@ export function drawLevelUp(ctx, canvasWidth, canvasHeight, options, selectedIdx
 
   options.forEach((opt, i) => {
     const cardX = startX + i * (cardW + gap);
-    const cardY = cy - cardH / 2 - 10;
+    const cardY = cy - cardH / 2 + 12;
     const sel = i === selectedIdx;
 
     ctx.fillStyle = sel ? 'rgba(255, 215, 0, 0.18)' : 'rgba(8, 8, 24, 0.92)';
